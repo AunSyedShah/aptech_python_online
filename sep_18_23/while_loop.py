@@ -1,5 +1,8 @@
+total = 0
 while True:
-    pwd = input('Enter your password: ')
-    if pwd == '123456':
-        print('Welcome!')
+    price = int(input("Enter price: "))
+    if price < 1:
         break
+    total += price
+
+print(f"Total: {total}")
