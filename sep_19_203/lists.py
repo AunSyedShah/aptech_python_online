@@ -11,4 +11,4 @@ print(fruits[4])
 # negative index
 print(fruits[-1])
 # range of index
-print(fruits[1:3])
+print(fruits[2:5])
