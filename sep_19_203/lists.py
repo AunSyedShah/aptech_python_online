@@ -12,3 +12,7 @@ print(fruits[4])
 print(fruits[-1])
 # range of index
 print(fruits[2:5])
+# skip start index
+print(fruits[:4])
+# skip end index
+print(fruits[2:])
