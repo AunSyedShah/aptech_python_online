@@ -10,3 +10,5 @@ person_ages = ['naruto', 20, 'sasuke', 21, 'sakura', 20]
 print(fruits[4])
 # negative index
 print(fruits[-1])
+# range of index
+print(fruits[1:3])
