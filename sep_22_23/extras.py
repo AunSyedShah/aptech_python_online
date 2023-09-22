@@ -25,5 +25,6 @@ while True:
         if contact_list == []:
             print("No Contact Found")
         else:
-            print(contact_list)
+            for contact in contact_list:
+                print(contact)
         os.system("pause")
