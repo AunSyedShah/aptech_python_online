@@ -7,6 +7,7 @@ while True:
     print("=====================================")
     print("1. Add Contact")
     print("2. View Contact")
+    print("3. Delete Contact")
     choice = input("Enter your choice: ")
     if choice == '1':
         os.system("cls")
@@ -27,4 +28,11 @@ while True:
         else:
             for contact in contact_list:
                 print(contact)
+        os.system("pause")
+    if choice == '3':
+        contact_number = input("Enter Contact Number To Delete: ")
+        for i in contact_list:
+            if contact_number in i:
+                contact_list.remove(i)
+                print("Contact Deleted Successfully")
         os.system("pause")
