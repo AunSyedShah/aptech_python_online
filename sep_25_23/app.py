@@ -7,7 +7,7 @@ root_window = tk.Tk()
 def add_contact_hadnler():
     conact_number_value = contact_number_entry.get()
     contacts.append(conact_number_value)
-    contact_number_entry.delete(0, tk.END)
+    contact_number_entry.delete("0", "end")
 
 def view_contact_handler():
     contact_text_box.delete(1.0, tk.END)
