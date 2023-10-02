@@ -1,21 +1,28 @@
-person = {
-    "name": "taha",
-    "age": 30,
-    "skills": ["python", "javascript", "c++", "c#"],
-    "address": {"street": "123 street", "city": "tehran", "country": "iran"},
-    "is_male": True,
-}
-# print dictionary
-print(person)
-# access a key
-print(person["name"])
-# add an element to dictionary
-person["job"] = "programmer"
-# print to verify
-print(person)
-# delete an element from dictionary
-del person["job"]
-# access list inside dictionary
-print(person["skills"][1])
-# access dictionary inside dictionary
-print(person["address"]["city"])
+import os
+
+contacts = {}
+while True:
+    print("1. Add/Update Contact")
+    print("2. View Contact")
+    print("3. Delete Contact")
+    print("4. Exit")
+    choice = input("Enter your choice: ")
+    if choice == "1":
+        contact_name = input("Enter Contact Name: ")
+        contact_number = input("Enter Contact Number: ")
+        contacts[contact_name] = contact_number
+        print("Contact Added Successfully")
+    elif choice == "2":
+        print("Contact Name\tContact Number")
+        # display dictionary
+        for k, v in contacts.items():
+            print(k, v)
+    elif choice == "3":
+        contact_name = input("Enter Contact Name: ")
+        if contact_name in contacts:
+            del contacts[contact_name]
+            print("Contact Deleted Successfully")
+        else:
+            print("Contact Not Found")
+    elif choice == "4":
+        break
