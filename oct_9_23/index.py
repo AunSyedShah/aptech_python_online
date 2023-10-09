@@ -1,9 +1,9 @@
 import sqlite3
 
-conn = sqlite3.connect('students.sqlite3')
-curr = conn.cursor()
+conn = sqlite3.connect('students.sqlite3') # step 1 - connect to database
+curr = conn.cursor() # step 2 - get cursor to execute queries
 # contacts table
-curr.execute("create table if not exists contacts (name text, phone text)")
+curr.execute("create table if not exists contacts (name text, phone text)") # step 3 - create table
 
 while True:
     print("Welcome to the contacts app")
