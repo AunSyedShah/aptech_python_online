@@ -21,10 +21,19 @@ while True:
         print("Contact added successfully")
     elif choice == "2":
         results = curr.execute("select * from contacts")
-        results = results.fetchall()
-        print("Name\tPhone")
         for result in results:
             print(result)
+    elif choice == "3":
+        name = input("Enter name: ")
+        curr.execute("delete from contacts where name = ?", (name,))
+        conn.commit()
+        print("Contact deleted successfully")
+    elif choice == "4":
+        name = input("Enter name: ")
+        phone = input("Enter phone: ")
+        curr.execute("update contacts set phone = ? where name = ?", (phone, name))
+        conn.commit()
+        print("Contact updated successfully")
     elif choice == "5":
         conn.close()
         break

@@ -1,0 +1,6 @@
+execute query with the help of cursor.
+always commit the connection.
+
+don't fotget to close the connection in last.
+
+whenever you fetch the data from database, you execute a loop
