@@ -1,10 +1,19 @@
 import tkinter as tk
+from tkinter import messagebox
 
 
 # step 1 - create root window
 root = tk.Tk()
 
 def create_contact():
+    # save contact function handler for save_button, to display a gui message box
+    def save_contact():
+        # get the contact name and number
+        contact_name = name_entry.get()
+        contact_number = number_entry.get()
+        print(contact_name, contact_number)
+
+
     # open a new window
     create_contact_window = tk.Toplevel(root)
     create_contact_window.title("Create Contact")
@@ -19,7 +28,7 @@ def create_contact():
     number_entry = tk.Entry(create_contact_window)
     number_entry.pack()
     # create a button to save the contact
-    save_button = tk.Button(create_contact_window, text="Save Contact")
+    save_button = tk.Button(create_contact_window, text="Save Contact", command=save_contact)
     save_button.pack()
 
 
